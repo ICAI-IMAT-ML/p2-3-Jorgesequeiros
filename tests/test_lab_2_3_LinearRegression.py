@@ -118,7 +118,7 @@ def test_evaluate_regression_imperfect():
 
 def test_anscombe_quartet():
     anscombe, datasets, models, result = anscombe_quartet()
-    assert len(datasets == 4), "Datasets should contain 4 elements."
+    assert len(datasets)== 4, "Datasets should contain 4 elements."
     assert all(
         map(lambda r2: pytest.approx(r2, 1e-2) == 0.666, result["R2"])
     ), "R2 values are incorrect."
